@@ -60,7 +60,10 @@ const validJson = (jsonString) => {
   return false;
 };
 
-if (process.env.GOOGLE_API_CREDENTIALS && !validJson(process.env.GOOGLE_API_CREDENTIALS)) {
+if (
+  process.env.GOOGLE_API_CREDENTIALS &&
+  !validJson(Buffer.from(process.env.GOOGLE_API_CREDENTIALS, "base64").toString("ascii"))
+) {
   console.warn(
     "\x1b[33mwarn",
     "\x1b[0m",
