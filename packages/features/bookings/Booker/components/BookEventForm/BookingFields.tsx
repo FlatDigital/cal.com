@@ -45,6 +45,10 @@ export const BookingFields = ({
           // rescheduleReason is a reschedule specific field and thus should be editable during reschedule
           readOnly = false;
         }
+        // Disable name and email
+        if (field.name === SystemField.Enum.name || field.name === SystemField.Enum.email) {
+          readOnly = true;
+        }
 
         if (field.name === SystemField.Enum.smsReminderNumber) {
           // `smsReminderNumber` and location.optionValue when location.value===phone are the same data point. We should solve it in a better way in the Form Builder itself.
