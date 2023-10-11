@@ -3556,6 +3556,7 @@ __metadata:
     jimp: ^0.16.1
     next-collect: ^0.2.1
     next-i18next: ^13.2.2
+    nodemailer-postmark-transport: ^5.2.1
     react-hot-toast: ^2.3.0
     rrule: ^2.7.1
     tailwind-merge: ^1.13.2
@@ -12639,6 +12640,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"addressparser@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "addressparser@npm:1.0.1"
+  checksum: 389051bc6a3a44082a6e7d6256c15e2aba55ae4799f1eed620e34f1c77ddf4dfe9baacc41c6ad25eb5f795195ff8a506dc07ef9e4bc033ee1ab3882edfed396d
+  languageName: node
+  linkType: hard
+
 "adjust-sourcemap-loader@npm:^4.0.0":
   version: 4.0.0
   resolution: "adjust-sourcemap-loader@npm:4.0.0"
@@ -13370,7 +13378,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:^3.2.4":
+"async@npm:^3.2.0, async@npm:^3.2.4":
   version: 3.2.4
   resolution: "async@npm:3.2.4"
   checksum: 43d07459a4e1d09b84a20772414aa684ff4de085cbcaec6eea3c7a8f8150e8c62aa6cd4e699fe8ee93c3a5b324e777d34642531875a0817a35697522c1b02e89
@@ -23551,7 +23559,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"libbase64@npm:1.2.1":
+"libbase64@npm:1.2.1, libbase64@npm:^1.2.1":
   version: 1.2.1
   resolution: "libbase64@npm:1.2.1"
   checksum: 891ed18fa0f0cd51a7a50d305dad03c3c35a077d46d23bd0a642a9710273294e331269ccf469a60e2191919f87fdf57c333d36bf4d33f176077c7cb3baf5c07c
@@ -23570,7 +23578,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"libmime@npm:5.2.1":
+"libmime@npm:5.2.1, libmime@npm:^5.0.0":
   version: 5.2.1
   resolution: "libmime@npm:5.2.1"
   dependencies:
@@ -26011,6 +26019,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nodemailer-build-attachment@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "nodemailer-build-attachment@npm:3.0.0"
+  dependencies:
+    libbase64: ^1.2.1
+    libmime: ^5.0.0
+    nodemailer-fetch: ^2.1.0
+  checksum: c651ffbcf8f4132bbb0937edbc9e196e4eedaf2e5c46252c7511fd4dc93b7d1c9a61b1659f18f81d1e1fe8dc971da0822ecebcf6ddd1bc97822fe833eff2131b
+  languageName: node
+  linkType: hard
+
+"nodemailer-fetch@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "nodemailer-fetch@npm:2.1.0"
+  checksum: b255e411a3285664a6c5994a914802f9f42d7246253344fb3210fedb5f481876f852da8448072cfc05b68dbec61d9653e41dc977fcecadd4ebc00b86049fa81c
+  languageName: node
+  linkType: hard
+
+"nodemailer-postmark-transport@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "nodemailer-postmark-transport@npm:5.2.1"
+  dependencies:
+    addressparser: ^1.0.1
+    async: ^3.2.0
+    nodemailer-build-attachment: ^3.0.0
+    postmark: ^2.7.4
+  peerDependencies:
+    nodemailer: ">=4.x"
+  checksum: 16150c0b981d7632bfe23e1ac4f19e79f7d2b896211017ce1382e2292c06e34fd92cd37eb3385cc3a970a38e60aa7374c1a78a7bff7193ba2b74f54715a89ac1
+  languageName: node
+  linkType: hard
+
 "nodemailer@npm:6.9.3":
   version: 6.9.3
   resolution: "nodemailer@npm:6.9.3"
@@ -27903,6 +27943,15 @@ __metadata:
   dependencies:
     xtend: ^4.0.0
   checksum: 746b71f93805ae33b03528e429dc624706d1f9b20ee81bf743263efb6a0cd79ae02a642a8a480dbc0f09547b4315ab7df6ce5ec0be77ed700bac42730f5c76b2
+  languageName: node
+  linkType: hard
+
+"postmark@npm:^2.7.4":
+  version: 2.9.5
+  resolution: "postmark@npm:2.9.5"
+  dependencies:
+    axios: ^0.25.0
+  checksum: e715fb0dc9cc8b03083525b131083489c2f0652413c70e5a6f77ef8dbd85e3cf8d33b3156e792ce020a212065871a1dba81d7684cc8f27330dd0aa30b3bcb957
   languageName: node
   linkType: hard
 
